@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block head %}
+<!-- <link rel="stylesheet" href="./css/main.css"> -->
+<title>CloudFlix - Home</title>
+{% endblock %}
+
+
+
+{% block body %}
+
+
+
+<nav id="nav-id" class="nav-class">
+    <!-- logo a gauche -->
+    <div class="logo-nav-left">
+        <h1 class="logo-h1">CloudFlix</h1>
+    </div>
+
+    <div class="nav-right">
+        <input type="text" placeholder="search for a video">
+        <a href="/addvideo">
+            <h2 class="h2-nav"> + ADD VIDEOS</h2>
+        </a>
+    </div>
+</nav>
+
+<section class="main" id="main">
+    <!-- block selection de catégorie -->
+    <div class="bloc-categ">
+        <label for="select-main">Select category :
+            <select id="select-main" class="select-main-class">
+                <option value="">-- Please select a category --</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+            </select>
+        </label>
+    </div>
+    <!-- premier carousel : python -->
+    <h2 class="python-vids-title">PYTHON VIDEOS</h2>
+
+    <div id="python-vids" class="python-vids">
+
+        {% for i in range (0,len) %}
+        {% if results[i][6] == "Python" %}
+
+
+        <div class="grid-duplicate">
+            <iframe src=" {{results[i][3]}} " frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen> </iframe>
+            <p class="title" id="title-vid">{{results[i][1]}}
+            </p>
+            <p class="author" id="author-vid">{{results[i][2]}}</p>
+            <p class="description" id="description-vid">{{results[i][5]}}</p>
+            <p>{{results[i][6]}}</p>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+
+    <!-- deuxieme carousel : js -->
+    <h2 class="js-vids-title">JAVASCRIPT VIDEOS</h2>
+
+
+    <div id="python-vids" class="js-vids">
+
+        {% for i in range (0,len) %}
+        {% if results[i][6] == "JavaScript" %}
+      
+
+        <div class="grid-duplicate">
+            <iframe src=" {{results[i][3]}} " frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen> </iframe>
+            <p class="title" id="title-vid">{{results[i][1]}}
+            </p>
+            <p class="author" id="author-vid">{{results[i][2]}}</p>
+            <p class="description" id="description-vid">{{results[i][5]}}</p>
+            <p>{{results[i][6]}}</p>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
+
+
+</html>
