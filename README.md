@@ -1,29 +1,15 @@
-# Foobar
+# CloudFlix
 
-Foobar is a Python library for dealing with word pluralization.
+CloudFlix is a simple website where you can add videos categorized by team to keep track of your tutorials and bookmark them.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Juste use the command ```docker-compose up``` to launch the project. Don't forget to install docker on your machine in ther first place !
 
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Future updates
+I'm still learning and working on this project so please be kind, i'm working on a search bar and a way to increment categories yourself in the near future. 
